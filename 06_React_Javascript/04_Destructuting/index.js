@@ -83,4 +83,21 @@ const {
   name: myName,
   address: { street = "a road", state },
 } = personOne;
-console.log(street, state);
+// console.log(street, state);
+
+// Destructure and combine objects:
+// Let say we have personThree below that only has name and age.
+const personThree = {
+  age: 32,
+  favFood: "Water melon",
+};
+// We'll combine person 1 and person 3 so that everyhing in person 3 will overwrite person 1. An easy way to do that is:
+const personFour = { ...personOne, ...personThree };
+// console.log(personFour);
+
+// Another powerful way to use destructuring is the ability is to use it inside of a function inside on arguments
+function printUser({ name, age, favFood = "No fav food" }) {
+  console.log(`Name is: ${name}. Age is ${age}. Favourite food is: ${favFood}`);
+}
+printUser(personFour);
+printUser(personOne);
