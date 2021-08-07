@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 export default function CarouselComp() {
+  // CAROUSEL COMPONENT
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
