@@ -22,6 +22,11 @@ const store = createStore(
 // ACTION --> INCREMENT
 // action describes what you want to do. For example of a counter app, action could be increment. The action just describe what you want to do, but doesn't mean you're doing it yet.
 // An action is  function that returns an object
+// Note: Action must be plain object. In SimpleTut video, he demonstrated using an async function in action (signInUser async dispatch await auth.signInWithEmailAndPassword) and the browser gave an error. The solution is to use Redux Thunk middleware
+// https://www.youtube.com/watch?v=U39qSt-t3RM&list=PL-Db3tEF6pB8UO2MmccX-5qeGDX9rek7Q&index=9, 22:00
+
+// Another way to handle asynchronous code instead of using Redux Thunk is to use Redux Saga: https://www.youtube.com/watch?v=su9XgeW7g-Y&list=PL-Db3tEF6pB8UO2MmccX-5qeGDX9rek7Q&index=10
+// What Saga does is to allow you to take the asynchronous code out of the action creator and it will actually intercept action that you tell it to, it will call a generator function that can handle the asynchronous event and then it will dispatch another action to then go ahead and update your store
 
 // REDUCER
 // Reducer describe how your action transform state into the next state.
