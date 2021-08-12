@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
-import FunctionContextComponent from "./hooks/_7_useContext_FunctionContextComponent";
-import { ThemeProvider } from "./hooks/_7_ThemeContext";
+import FunctionContextComponent from "./_7_useContext_FunctionContextComponent";
+import { ThemeProvider } from "./_7_ThemeContext";
 // to test, copy and paste entire file to App.js
 
 // Study notes for Redux is in index.js
